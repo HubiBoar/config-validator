@@ -1,0 +1,5 @@
+dotnet run azure app-configuration-secret --file-path "..\validation.yml" --key-vault-name "{value}" --secret-name "{value}"
+dotnet run azure app-configuration-secret --file-path "..\validation.yml" --key-vault-name "{value}" --tenant-id "{value}" --client-id "{value}" --client-secret "{value}" --secret-name "{value}"
+
+docker build . -t configvalidator:latest
+docker run -v c:/Projects/ConfigValidator/Files:/mnt configvalidator:latest azure app-configuration-secret --file-path "../mnt/validation.yml" --key-vault-name "{value}" --tenant-id "{value}" --client-id "{value}" --client-secret "{value}" --secret-name "{value}"

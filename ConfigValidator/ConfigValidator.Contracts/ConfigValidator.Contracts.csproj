@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="OneOf" Version="3.0.263" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\ModulR\ModulR.Extensions\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation.csproj" />
+      <ProjectReference Include="..\..\ModulR\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction.csproj" />
+      <ProjectReference Include="..\..\ModulR\ModulR.Validation\ModulR.Validation\ModulR.Validation.csproj" />
+      <ProjectReference Include="..\..\ModulR\ModulR.ValueWrapper\ModulR.ValueWrapper\ModulR.ValueWrapper.csproj" />
+    </ItemGroup>
+
+</Project>

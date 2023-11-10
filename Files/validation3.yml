@@ -1,0 +1,2 @@
+﻿GlobalTest.AcademyWebhookSecurityHashConfiguration:SharedSecret: IsConnectionString
+GlobalTest.AzureSearchUrl: IsUrl

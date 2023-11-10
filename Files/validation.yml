@@ -1,0 +1,15 @@
+entries:
+  sqlConnectionString:
+    isConnectionString:
+
+  testValue:
+    hasLength:
+      min: 5
+      max: 10
+    isUpperCase:
+      
+  DBSECRET:
+    hasLength:
+      min: 5
+      max: 10
+    isUpperCase:
