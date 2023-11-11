@@ -150,7 +150,7 @@ internal class ResultsDrawer : IValidationResultDrawer
     private static OneOf<Success, Error> GetStatus(
         IReadOnlyCollection<ValidationResult> validationResults)
     {
-        return validationResults.All(x => x.Result.IsT0) ? new Success() : new Error();
+        return validationResults.All(x => x.Result.IsT0 && x.Result.AsT0.Result.IsT0) ? new Success() : new Error();
     }
 
     private static string CombineLines(
