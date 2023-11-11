@@ -1,11 +1,11 @@
 ﻿using Cocona;
+using ConfigValidator.Cli;
 using ConfigValidator.Console;
 using ConfigValidator.Contracts;
 using ConfigValidator.Fluent;
 using ConfigValidator.Presentation;
 using ConfigValidator.Providers.Azure;
 using ConfigValidator.Yaml;
-using ConfigValidatorRunner;
 
 var builder = CoconaApp.CreateBuilder();
 var app = builder.Build();

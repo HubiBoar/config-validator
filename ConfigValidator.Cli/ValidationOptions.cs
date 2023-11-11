@@ -1,9 +1,7 @@
-﻿using ConfigValidator;
-using ConfigValidator.Fluent;
-using Microsoft.Extensions.Configuration;
+﻿using ConfigValidator.Fluent;
 using ModulR.Extensions.FluentValidation.External;
 
-namespace ConfigValidatorRunner;
+namespace ConfigValidator.Cli;
 
 public static class ValidationOptions
 {

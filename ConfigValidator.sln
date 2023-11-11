@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigValidatorRunner", "ConfigValidatorRunner\ConfigValidatorRunner.csproj", "{13FD0715-9894-4997-B5D2-36D3DA46E0F2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModulR.Extensions.FluentValidation", "ModulR.Extensions.FluentValidation", "{1034702C-205A-41EA-A8DD-A147F181CC86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModulR.Extensions.FluentValidation", "ModulR\ModulR.Extensions\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation.csproj", "{23C77EAA-9384-400A-BD3D-9A0611FCD62D}"
@@ -40,16 +38,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigValidator.Providers.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigValidator.Console", "ConfigValidator\ConfigValidator.Console\ConfigValidator.Console.csproj", "{2F9E0032-EA7A-485F-80D3-F275791FEC50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigValidator.Cli", "ConfigValidator.Cli\ConfigValidator.Cli.csproj", "{F1B5F20E-A0B5-4A65-AEE6-B1F561293770}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13FD0715-9894-4997-B5D2-36D3DA46E0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13FD0715-9894-4997-B5D2-36D3DA46E0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13FD0715-9894-4997-B5D2-36D3DA46E0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13FD0715-9894-4997-B5D2-36D3DA46E0F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23C77EAA-9384-400A-BD3D-9A0611FCD62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23C77EAA-9384-400A-BD3D-9A0611FCD62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C77EAA-9384-400A-BD3D-9A0611FCD62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -94,6 +90,10 @@ Global
 		{2F9E0032-EA7A-485F-80D3-F275791FEC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9E0032-EA7A-485F-80D3-F275791FEC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F9E0032-EA7A-485F-80D3-F275791FEC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B5F20E-A0B5-4A65-AEE6-B1F561293770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B5F20E-A0B5-4A65-AEE6-B1F561293770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B5F20E-A0B5-4A65-AEE6-B1F561293770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B5F20E-A0B5-4A65-AEE6-B1F561293770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{23C77EAA-9384-400A-BD3D-9A0611FCD62D} = {1034702C-205A-41EA-A8DD-A147F181CC86}

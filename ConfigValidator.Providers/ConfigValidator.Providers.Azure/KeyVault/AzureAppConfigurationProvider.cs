@@ -1,10 +1,9 @@
-﻿using Azure.Data.AppConfiguration;
-using Azure.Security.KeyVault.Secrets;
-using ConfigValidator.Console;
+﻿using Azure.Security.KeyVault.Secrets;
 using ConfigValidator.Contracts;
+using ConfigValidator.Providers.Azure.AppConfiguration;
 using OneOf;
 
-namespace ConfigValidator.Providers.Azure.AppConfiguration;
+namespace ConfigValidator.Providers.Azure.KeyVault;
 
 internal class AzureKeyVaultProvider : IValueForKeyProvider
 {

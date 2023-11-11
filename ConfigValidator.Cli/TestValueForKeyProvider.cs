@@ -1,7 +1,7 @@
 ﻿using ConfigValidator.Contracts;
 using OneOf;
 
-namespace ConfigValidatorRunner;
+namespace ConfigValidator.Cli;
 
 internal class TestValueForKeyProvider : IValueForKeyProvider
 {

@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["ConfigValidatorRunner/ConfigValidatorRunner.csproj", "ConfigValidatorRunner/"]
+COPY ["ConfigValidator.Cli/ConfigValidator.Cli.csproj", "ConfigValidator.Cli/"]
 COPY ["ConfigValidator.Providers/ConfigValidator.Providers.Azure/ConfigValidator.Providers.Azure.csproj", "ConfigValidator.Providers/ConfigValidator.Providers.Azure/"]
 COPY ["ConfigValidator/ConfigValidator.Contracts/ConfigValidator.Contracts.csproj", "ConfigValidator/ConfigValidator.Contracts/"]
 COPY ["ModulR/ModulR.Extensions/ModulR.Extensions.FluentValidation/ModulR.Extensions.FluentValidation/ModulR.Extensions.FluentValidation.csproj", "ModulR/ModulR.Extensions/ModulR.Extensions.FluentValidation/ModulR.Extensions.FluentValidation/"]
@@ -14,15 +14,15 @@ COPY ["ConfigValidator/ConfigValidator.Console/ConfigValidator.Console.csproj", 
 COPY ["ConfigValidator/ConfigValidator.Presentation/ConfigValidator.Presentation.csproj", "ConfigValidator/ConfigValidator.Presentation/"]
 COPY ["ConfigValidator/ConfigValidator.Yaml/ConfigValidator.Yaml.csproj", "ConfigValidator/ConfigValidator.Yaml/"]
 COPY ["ConfigValidator/ConfigValidator.Fluent/ConfigValidator.Fluent.csproj", "ConfigValidator/ConfigValidator.Fluent/"]
-RUN dotnet restore "ConfigValidatorRunner/ConfigValidatorRunner.csproj"
+RUN dotnet restore "ConfigValidator.Cli/ConfigValidator.Cli.csproj"
 COPY . .
-WORKDIR "/src/ConfigValidatorRunner"
-RUN dotnet build "ConfigValidatorRunner.csproj" -c Release -o /app/build
+WORKDIR "/src/ConfigValidator.Cli"
+RUN dotnet build "ConfigValidator.Cli.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ConfigValidatorRunner.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "ConfigValidator.Cli.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ConfigValidatorRunner.dll"]
+ENTRYPOINT ["dotnet", "ConfigValidator.Cli.dll"]
