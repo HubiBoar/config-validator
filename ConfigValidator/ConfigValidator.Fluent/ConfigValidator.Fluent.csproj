@@ -12,8 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\ModulR\ModulR.Extensions\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation.csproj" />
-      <ProjectReference Include="..\..\ModulR\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction.csproj" />
       <ProjectReference Include="..\ConfigValidator.Contracts\ConfigValidator.Contracts.csproj" />
     </ItemGroup>
 

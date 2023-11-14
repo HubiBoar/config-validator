@@ -2,13 +2,12 @@
 using Cocona;
 using Cocona.Builder;
 using ConfigValidator.Console;
-using ConfigValidator.Providers.Azure.AppConfiguration;
 
 namespace ConfigValidator.Providers.Azure.KeyVault;
 
-internal sealed class KeyVaultModule : IModule
+internal static class KeyVaultCommands
 {
-    public static void Configure(ICoconaCommandsBuilder app, Action<CallBuilder> finishedCallBack)
+    public static void AddCommands(ICoconaCommandsBuilder app, Action<CallBuilder> finishedCallBack)
     {
         app.AddCommand("KeyVault", (
             DefaultParameters defaultParameters,

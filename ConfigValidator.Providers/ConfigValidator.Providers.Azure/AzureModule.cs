@@ -1,20 +1,31 @@
 ﻿using Cocona;
-using Cocona.Builder;
 using ConfigValidator.Console;
 using ConfigValidator.Providers.Azure.AppConfiguration;
 using ConfigValidator.Providers.Azure.KeyVault;
+using ModulR.Extensions.Cocona;
+using ModulR.Startup;
 
 namespace ConfigValidator.Providers.Azure;
 
-public class AzureAppConfigModule : IModule
+public sealed class AzureAppConfigModule : ICoconaModule
 {
-    public static void Configure(ICoconaCommandsBuilder app, Action<CallBuilder> callback)
+    private readonly Action<CallBuilder> _finishedCallBack;
+
+    public AzureAppConfigModule(Action<CallBuilder> finishedCallBack)
     {
-        app.AddSubCommand("Azure", x =>
+        _finishedCallBack = finishedCallBack;
+    }
+
+    public void SetupModule(ModuleSetup setup)
+    {
+    }
+
+    public void SetupHost(HostSetup<CoconaApp> setup)
+    {
+        setup.Host.AddSubCommand("Azure", x =>
         {
-            x.AddModule<AppConfigurationModule>(callback);
-            
-            x.AddModule<KeyVaultModule>(callback);
+            KeyVaultCommands.AddCommands(x, _finishedCallBack);
+            AppConfigurationCommands.AddCommands(x, _finishedCallBack);
         });
     }
 }

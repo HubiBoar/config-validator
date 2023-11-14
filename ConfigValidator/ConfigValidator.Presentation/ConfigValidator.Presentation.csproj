@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\ModulR\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction\ModulR.Validation.Abstraction.csproj" />
       <ProjectReference Include="..\ConfigValidator.Contracts\ConfigValidator.Contracts.csproj" />
     </ItemGroup>
     

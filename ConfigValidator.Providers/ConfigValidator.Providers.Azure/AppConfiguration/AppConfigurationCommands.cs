@@ -7,9 +7,9 @@ using ConfigValidator.Providers.Azure.KeyVault;
 
 namespace ConfigValidator.Providers.Azure.AppConfiguration;
 
-internal class AppConfigurationModule : IModule
+internal static class AppConfigurationCommands
 {
-    public static void Configure(ICoconaCommandsBuilder app, Action<CallBuilder> finishedCallBack)
+    public static void AddCommands(ICoconaCommandsBuilder app, Action<CallBuilder> finishedCallBack)
     {
         app.AddCommand("AppConfiguration", (
             DefaultParameters defaultParameters,

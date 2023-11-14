@@ -1,44 +1,13 @@
-﻿using Cocona;
-using ConfigValidator.Cli;
-using ConfigValidator.Console;
-using ConfigValidator.Contracts;
-using ConfigValidator.Fluent;
-using ConfigValidator.Presentation;
+﻿using ConfigValidator.Cli;
 using ConfigValidator.Providers.Azure;
-using ConfigValidator.Yaml;
+using ModulR.Extensions.Cocona;
 
-var builder = CoconaApp.CreateBuilder();
-var app = builder.Build();
-
-AddModule<AzureAppConfigModule>(app);
-
-app.Run();
-
-static void AddModule<TModule>(CoconaApp app)
-    where TModule : IModule
-{
-    app.AddModule<TModule>(Run);
-}
-
-static void Run(CallBuilder builder)
-{
-    var resultDrawer = ValidationResultDrawerFactory.Create();
-    var mappingValidator = FluentMappingValidatorFactory.Create(ValidationOptions.RegisterMethods);
-    var mappingsProvider = MappingsFromYamlProviderFactory.FromFile(builder.FilePath);
-    var valueProvider = builder.ValueForKeyProviderProvider;
-
-    var validationResult = Validator.Validate(
-        mappingsProvider,
-        valueProvider,
-        mappingValidator,
-        _ => { });
-
-    var resultDrawing = resultDrawer.DrawResults(validationResult);
-
-    Console.WriteLine(resultDrawing.Value);
-
-    if (resultDrawing.Status.IsT1)
+await CoconaModularStartup.Setup(
+    builder =>
     {
-        throw new Exception();
-    }
-}
+        builder.AddModule(new AzureAppConfigModule(ConsoleRunner.Run));
+    },
+    host =>
+    {
+
+    });

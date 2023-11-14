@@ -1,5 +1,4 @@
 ﻿using ConfigValidator.Contracts;
-using ModulR.Validation;
 using YamlDotNet.Core.Tokens;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;

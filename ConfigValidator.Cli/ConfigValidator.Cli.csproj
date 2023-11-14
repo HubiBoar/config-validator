@@ -14,7 +14,6 @@
         <ProjectReference Include="..\ConfigValidator\ConfigValidator.Fluent\ConfigValidator.Fluent.csproj" />
         <ProjectReference Include="..\ConfigValidator\ConfigValidator.Presentation\ConfigValidator.Presentation.csproj" />
         <ProjectReference Include="..\ConfigValidator\ConfigValidator.Yaml\ConfigValidator.Yaml.csproj" />
-        <ProjectReference Include="..\ModulR\ModulR.Extensions\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation\ModulR.Extensions.FluentValidation.csproj" />
     </ItemGroup>
 
     <ItemGroup>
