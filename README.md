@@ -13,7 +13,7 @@ GlobalTest.Value2: IsUrl
 GlobalTest.Value3: IsUrl
 ```
 
-Then it can be run in for example Azure Pipeline
+Then it can be run in for example Azure Pipeline.
 
 ```yml
 pool:
