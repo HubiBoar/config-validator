@@ -3,7 +3,7 @@
 [![NuGet Version](https://img.shields.io/nuget/v/ConfigValidator.Cli)](https://www.nuget.org/packages/ConfigValidator.Cli/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/ConfigValidator.Cli)](https://www.nuget.org/packages/ConfigValidator.Cli/)
 
-**Config-Validator** is an tool helping to validate configuration using automated pipelines and CLI.
+**Config-Validator** is a DevOps tool helping to validate configuration using automated pipelines and CLI.
 <br>Configuration validation is setup using YAML with Validation Methods taken from [Definit.Validation](https://www.nuget.org/packages/Definit.Validation/) package.
 <br>For now it supports Azure KeyVault and Azure AppConfiguration out of the box.
 
