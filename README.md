@@ -4,8 +4,8 @@
 [![NuGet Downloads](https://img.shields.io/nuget/dt/ConfigValidator.Cli)](https://www.nuget.org/packages/ConfigValidator.Cli/)
 
 **Config-Validator** is an tool helping to validate configuration using automated pipelines and CLI.
-Configuration validation is setup using YAML with Validation Methods taken from [Definit.Validation](https://www.nuget.org/packages/Definit.Validation/) package.
-For now it supports Azure KeyVault and Azure AppConfiguration out of the box.
+<br>Configuration validation is setup using YAML with Validation Methods taken from [Definit.Validation](https://www.nuget.org/packages/Definit.Validation/) package.
+<br>For now it supports Azure KeyVault and Azure AppConfiguration out of the box.
 
 ```yml
 ﻿GlobalTest.Value1:SharedSecret: IsConnectionString
